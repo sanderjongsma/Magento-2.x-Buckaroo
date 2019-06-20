@@ -1,0 +1,17 @@
+<?php
+/**
+ * Copyright © 2019 Appmerce - Applications for Ecommerce
+ * http://www.appmerce.com
+ */
+
+/**
+ * @var $block \Appmerce\Buckaroo\Block\Info\Ideal
+ */
+?>
+<dl class="payment-method appmerce buckaroo">
+    <dt class="title"><?php echo $block->escapeHtml($block->getMethod()->getTitle()) ?></dt>
+    <dd class="content">
+        <strong><?php echo $block->escapeHtml(__('Account Number')) ?></strong>
+        <span><?php echo $block->escapeHtml($block->getInfo()->getAdditionalInformation('consumer_account_number')) ?></span>
+    </dd>
+</dl>

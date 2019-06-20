@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © 2019 Appmerce - Applications for Ecommerce
+ * http://www.appmerce.com
+ */
+
+/**
+ * @var $block \Appmerce\Buckaroo\Block\Form\Directdebit
+ */
+$methodCode = $block->escapeHtml($block->getMethodCode());
+?>
+<fieldset class="fieldset items <?php /* @noEscape */ echo $methodCode ?>" id="payment_form_<?php /* @noEscape */ echo $methodCode ?>" style="display: none">
+    <div class="field required">
+        <label for="consumer_account_name" class="label"><span><?php echo $block->escapeHtml(__('Account Holder Name')) ?></span></label>
+        <div class="control">
+            <input type="text" id="consumer_account_name" name="payment[consumer_account_name]" title="<?php echo $block->escapeHtml(__('Account Holder Name')) ?>" class="required-entry" value="<?php echo $block->getInfo()->getAdditionalData('consumer_account_name'); ?>" />
+        </div>
+    </div>
+    <div class="field required">
+        <label for="consumer_account_number" class="label"><span><?php echo $block->escapeHtml(__('Account Number')) ?></span></label>
+        <div class="control">
+            <input type="text" id="consumer_account_number" name="payment[consumer_account_number]" title="<?php echo $block->escapeHtml(__('Account Number')) ?>" class="required-entry" value="<?php echo $block->getInfo()->getAdditionalData('consumer_account_number'); ?>" />
+        </div>
+    </div>
+</fieldset>

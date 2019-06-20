@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2019 Appmerce - Applications for Ecommerce
+ * http://www.appmerce.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <appmerce_buckaroo_shared>
+            	<model>Appmerce\Buckaroo\Model\Buckaroo</model>
+                <private_thumbprint backend_model="Magento\Config\Model\Config\Backend\Encrypted"/>
+                <secret_key backend_model="Magento\Config\Model\Config\Backend\Encrypted"/>
+            </appmerce_buckaroo_shared>
+            <appmerce_buckaroo_amex>
+            	<model>Appmerce\Buckaroo\Model\Api\Amex</model>
+            	<title>Credit Card - Amex</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_amex>
+            <appmerce_buckaroo_bcmc>
+            	<model>Appmerce\Buckaroo\Model\Api\Bcmc</model>
+            	<title>Bancontact / Mister Cash</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_bcmc>
+            <appmerce_buckaroo_directdebit>
+            	<model>Appmerce\Buckaroo\Model\Api\Directdebit</model>
+            	<title>Direct Debit</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_directdebit>
+            <appmerce_buckaroo_eps>
+            	<model>Appmerce\Buckaroo\Model\Api\Eps</model>
+            	<title>EPS</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_eps>
+            <appmerce_buckaroo_giropay>
+            	<model>Appmerce\Buckaroo\Model\Api\Giropay</model>
+            	<title>Giropay</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_giropay>
+            <appmerce_buckaroo_ideal>
+            	<model>Appmerce\Buckaroo\Model\Api\Ideal</model>
+            	<title>iDEAL</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_ideal>
+            <appmerce_buckaroo_idealprocessing>
+            	<model>Appmerce\Buckaroo\Model\Api\Idealprocessing</model>
+            	<title>iDEAL</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_idealprocessing>
+            <appmerce_buckaroo_maestro>
+            	<model>Appmerce\Buckaroo\Model\Api\Maestro</model>
+            	<title>Credit Card - Maestro</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_maestro>
+            <appmerce_buckaroo_mastercard>
+            	<model>Appmerce\Buckaroo\Model\Api\Mastercard</model>
+            	<title>Credit Card - MasterCard</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_mastercard>
+            <appmerce_buckaroo_onlinegiro>
+            	<model>Appmerce\Buckaroo\Model\Api\Onlinegiro</model>
+            	<title>Online Giro</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_onlinegiro>
+            <appmerce_buckaroo_paypal>
+            	<model>Appmerce\Buckaroo\Model\Api\Paypal</model>
+            	<title>PayPal</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_paypal>
+            <appmerce_buckaroo_payperemail>
+            	<model>Appmerce\Buckaroo\Model\Api\Payperemail</model>
+            	<title>Pay Per Email</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_payperemail>
+            <appmerce_buckaroo_paysafecard>
+            	<model>Appmerce\Buckaroo\Model\Api\Paysafecard</model>
+            	<title>Paysafecard</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_paysafecard>
+            <appmerce_buckaroo_sofort>
+            	<model>Appmerce\Buckaroo\Model\Api\Sofort</model>
+            	<title>Sofort Banking</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_sofort>
+            <appmerce_buckaroo_transfer>
+            	<model>Appmerce\Buckaroo\Model\Api\Transfer</model>
+            	<title>Bank Transfer</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_transfer>
+            <appmerce_buckaroo_transfergarant>
+            	<model>Appmerce\Buckaroo\Model\Api\Transfergarant</model>
+            	<title>Bank Transfer Garant</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_transfergarant>
+            <appmerce_buckaroo_ukash>
+            	<model>Appmerce\Buckaroo\Model\Api\Ukash</model>
+            	<title>Ukash</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_ukash>
+            <appmerce_buckaroo_visa>
+            	<model>Appmerce\Buckaroo\Model\Api\Visa</model>
+            	<title>Credit Card - Visa</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_visa>
+            <appmerce_buckaroo_vpay>
+            	<model>Appmerce\Buckaroo\Model\Api\Vpay</model>
+            	<title>V Pay</title>
+                <active>0</active>
+                <order_status>pending</order_status>
+                <pending_status>pending_payment</pending_status>
+                <processing_status>processing</processing_status>
+                <allowspecific>0</allowspecific>
+                <usecache>0</usecache>
+            </appmerce_buckaroo_vpay>
+        </payment>
+    </default>
+</config>

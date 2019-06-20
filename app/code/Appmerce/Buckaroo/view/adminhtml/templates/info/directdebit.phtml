@@ -1,0 +1,20 @@
+<?php
+/**
+ * Copyright © 2019 Appmerce - Applications for Ecommerce
+ * http://www.appmerce.com
+ */
+
+/**
+ * @var $block \Appmerce\Buckaroo\Block\Info\Ideal
+ */
+$additionalInformation = $block->getInfo()->getAdditionalInformation();
+?>
+<div class="order-payment-method-name"><?php echo $block->escapeHtml($block->getMethod()->getTitle()); ?></div>
+<table class="data-table admin__table-secondary">
+    <?php foreach ($additionalInformation as $key => $value): ?>
+    <tr>
+        <th><?php echo $block->escapeHtml($key); ?>:</th>
+        <td><?php echo $block->escapeHtml($value); ?></td>
+    </tr>
+    <?php endforeach; ?>
+</table>

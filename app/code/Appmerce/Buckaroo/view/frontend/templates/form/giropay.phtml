@@ -1,0 +1,19 @@
+<?php
+/**
+ * Copyright © 2019 Appmerce - Applications for Ecommerce
+ * http://www.appmerce.com
+ */
+
+/**
+ * @var $block \Appmerce\Buckaroo\Block\Form\Ideal
+ */
+$methodCode = $block->escapeHtml($block->getMethodCode());
+?>
+<fieldset class="fieldset items <?php /* @noEscape */ echo $methodCode ?>" id="payment_form_<?php /* @noEscape */ echo $methodCode ?>" style="display: none">
+    <div class="field required">
+        <label for="bankleitzahl" class="label"><span><?php echo $block->escapeHtml(__('Bankleitzahl')) ?></span></label>
+        <div class="control">
+            <input type="text" id="bankleitzahl" name="payment[bankleitzahl]" title="<?php echo $block->escapeHtml(__('Account Number')) ?>" class="required-entry" value="<?php echo $block->getInfo()->getAdditionalData('bankleitzahl'); ?>" />
+        </div>
+    </div>
+</fieldset>

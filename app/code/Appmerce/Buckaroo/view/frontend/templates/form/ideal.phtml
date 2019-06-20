@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © 2019 Appmerce - Applications for Ecommerce
+ * http://www.appmerce.com
+ */
+
+/**
+ * @var $block \Appmerce\Buckaroo\Block\Form\Ideal
+ */
+$methodCode = $block->escapeHtml($block->getMethodCode());
+?>
+<fieldset class="fieldset items <?php /* @noEscape */ echo $methodCode ?>" id="payment_form_<?php /* @noEscape */ echo $methodCode ?>" style="display: none">
+    <div class="field number required">
+        <label for="buckaroo_issuer_id" class="label"><span><?php echo $block->escapeHtml(__('Issuer')) ?></span></label>
+        <div class="control">
+            <?php if ($issuers = $block->_getIssuers()): ?>
+                <select id="buckaroo_issuer_id" name="payment[buckaroo_issuer_id]" title="<?php echo $block->escapeHtml(__('Issuer')) ?>" class="required-entry">
+                    <?php $selected = $block->getInfo()->getAdditionalData('issuer_id'); ?>
+                    <?php foreach ($issuers as $value => $label): ?>
+                        <option value="<?php echo $value; ?>"<?php if ($_selected == $value): ?> selected="selected"<?php endif; ?>><?php echo $label; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            <?php endif; ?>
+        </div>
+    </div>
+</fieldset>
